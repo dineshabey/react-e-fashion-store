@@ -4,21 +4,28 @@ import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
 
+const imageWidth = '20%';
+
 const images = [
     {
-        url: '/static/images/buttons/breakfast.jpg',
+        url: 'https://radikadilanka.com/rdfashion/static/media/all.71109807.jpg',
         title: 'Breakfast',
-        width: '40%',
+        width: imageWidth,
     },
     {
-        url: '/static/images/buttons/burgers.jpg',
+        url: 'https://radikadilanka.com/rdfashion/static/media/new.5e646b80.jpg',
         title: 'Burgers',
-        width: '30%',
+        width: imageWidth,
     },
     {
-        url: '/static/images/buttons/camera.jpg',
+        url: 'https://radikadilanka.com/rdfashion/static/media/tranding.6b7c7c16.jpg',
         title: 'Camera',
-        width: '30%',
+        width: imageWidth,
+    },
+    {
+        url: 'https://radikadilanka.com/rdfashion/static/media/top_items.867cf831.jpg',
+        title: 'Camera',
+        width: imageWidth,
     },
 ];
 
