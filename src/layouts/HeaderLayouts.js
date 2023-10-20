@@ -5,15 +5,36 @@ import Navbar from 'react-bootstrap/Navbar';
 
 
 export default function HeaderLayouts() {
- 
+
+    const navLinks = [
+        {
+            title: 'All Items',
+        },
+        {
+            title: 'Dressess',
+        },
+        {
+            title: 'Seasonal',
+        },
+        {
+            title: 'Denims',
+        },
+        {
+            title: 'Tshirts',
+        },
+        {
+            title: 'Tops',
+        },
+    ]
+
     return (
         <div>
             <Navbar collapseOnSelect expand="lg"
                 bg='black'
                 variant='black'
-                >
+            >
                 <Container>
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand href="#home" style={{ color: "yellow", fontWeight: 'bold', fontStyle: 'italic' }}>
                         <img
                             alt=""
                             src="https://radikadilanka.com/rdfashion/static/media/logo2.e5c0eee2.png"
@@ -23,16 +44,17 @@ export default function HeaderLayouts() {
                         />{' '}
                         e-Fashion
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Toggle style={{ backgroundColor: "white" }} aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="#features">Features</Nav.Link>
-                            <Nav.Link href="#pricing">Pricing</Nav.Link>
+                            {navLinks.map((val, key) => {
+                                return <Nav.Link href="#features" style={{ color: 'white' }} key={key}>{val.title.toUpperCase()}</Nav.Link>
+                            })}
 
                         </Nav>
                         <Nav>
-                            <Nav.Link eventKey={2} href="#memes">
-                                Dank memes
+                            <Nav.Link eventKey={2} href="#memes" style={{ color: 'white' }}>
+                                CART
                             </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
