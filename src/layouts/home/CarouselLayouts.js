@@ -1,6 +1,7 @@
 import React from 'react';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
+import SliderComponents from '../../components/home/SliderComponents';
 
 export default function CarouselLayouts() {
     const imageList = [
@@ -19,8 +20,9 @@ export default function CarouselLayouts() {
                 <Slider>
 
                     {imageList.map((val, key) => {
+                        console.log(val)
                         return <Slide key={key} index={key}>
-                            <div> <img src={val} width='100%'></img></div>
+                            <SliderComponents image={val} />
                         </Slide>
 
                     })}
