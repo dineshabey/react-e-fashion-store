@@ -13,7 +13,7 @@ export default function CarouselLayouts() {
         <div>
             <CarouselProvider
                 naturalSlideWidth={100}
-                naturalSlideHeight={125}
+                naturalSlideHeight={26}
                 totalSlides={3}
             >
                 <Slider>
