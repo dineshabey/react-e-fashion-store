@@ -11,7 +11,7 @@ export default function CarouselLayouts() {
     ]
 
     return (
-        <div>
+    
             <CarouselProvider
                 naturalSlideWidth={100}
                 naturalSlideHeight={26}
@@ -20,7 +20,6 @@ export default function CarouselLayouts() {
                 <Slider>
 
                     {imageList.map((val, key) => {
-                        console.log(val)
                         return <Slide key={key} index={key}>
                             <SliderComponents image={val} />
                         </Slide>
@@ -28,6 +27,6 @@ export default function CarouselLayouts() {
                     })}
                 </Slider>
             </CarouselProvider>
-        </div>
+      
     )
 }
