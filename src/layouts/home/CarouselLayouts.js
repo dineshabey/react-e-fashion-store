@@ -20,7 +20,7 @@ export default function CarouselLayouts() {
 
                     {imageList.map((val, key) => {
                         return <Slide key={key} index={key}>
-                            <img src={val}></img>
+                            <div> <img src={val} width='100%'></img></div>
                         </Slide>
 
                     })}
