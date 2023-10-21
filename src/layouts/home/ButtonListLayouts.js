@@ -9,22 +9,22 @@ const imageWidth = '20%';
 const images = [
     {
         url: 'https://radikadilanka.com/rdfashion/static/media/all.71109807.jpg',
-        title: 'Breakfast',
+        title: 'All Items',
         width: imageWidth,
     },
     {
         url: 'https://radikadilanka.com/rdfashion/static/media/new.5e646b80.jpg',
-        title: 'Burgers',
+        title: 'New Items',
         width: imageWidth,
     },
     {
         url: 'https://radikadilanka.com/rdfashion/static/media/tranding.6b7c7c16.jpg',
-        title: 'Camera',
+        title: 'Trending Items',
         width: imageWidth,
     },
     {
         url: 'https://radikadilanka.com/rdfashion/static/media/top_items.867cf831.jpg',
-        title: 'Camera',
+        title: 'Top Items',
         width: imageWidth,
     },
 ];
@@ -97,22 +97,31 @@ const ImageMarked = styled('span')(({ theme }) => ({
 
 export default function ButtonListLayouts() {
     return (
-        <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
+        <Box sx={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            minWidth: 300,
+            width: '100%',
+            justifyContent: 'center',
+
+        }}>
             {images.map((image) => (
                 <ImageButton
                     focusRipple
                     key={image.title}
                     style={{
                         width: image.width,
+                        margin:'2%',
                     }}
                 >
-                    <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
-                    <ImageBackdrop className="MuiImageBackdrop-root" />
+                    <ImageSrc style={{ backgroundImage: `url(${image.url})`,borderRadius:'20px' }}  />
+                    <ImageBackdrop className="MuiImageBackdrop-root" style={{borderRadius:'20px'}}/>
                     <Image>
                         <Typography
                             component="span"
                             variant="subtitle1"
                             color="inherit"
+                            style={{borderRadius:'120px'}}
                             sx={{
                                 position: 'relative',
                                 p: 4,
