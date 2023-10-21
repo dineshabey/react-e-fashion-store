@@ -8,7 +8,10 @@ export default function FotterLayouts() {
             backgroundColor: 'teal',
             display: 'flex',
             justifyContent: 'space-between',
-            p: '2px'
+            p: '2px',
+            position:'fixed',
+            width:'100%',
+            bottom:'0',
         }}>
             <div>
                 <small>&copy; Copyright {new Date().getFullYear()}</small>
