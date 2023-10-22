@@ -3,23 +3,28 @@ import React from 'react'
 
 export default function SliderComponents({ image }) {
     return (
-        <div style={{}}>
-            <Button
-                style={{
-                    color: 'white',
-                    borderRadius: '20px',
-                    border: '1px solid white',
-                    fontSize: '30px',
-                    padding: '5px 20px',
-                }}
-                sx={{
-                    '&:hover': {
-                        bgcolor: 'black',
-                    },
-                }}
-                variyant='outlined'
-            >
-                Shop now</Button>
+        <div style={{ position: 'relative' }}>
+            <div style={{ position: 'absolute', width: '100%',height:'80vh',display:'flex' }}>
+                <div style={{margin:'0 auto',marginTop:'20%'}}>
+
+                    <Button
+                        style={{
+                            color: 'white',
+                            borderRadius: '20px',
+                            border: '1px solid white',
+                            fontSize: '30px',
+                            padding: '5px 20px',
+                        }}
+                        sx={{
+                            '&:hover': {
+                                bgcolor: 'black',
+                            },
+                        }}
+                        variyant='outlined'
+                    >
+                        Shop now</Button>
+                </div>
+            </div>
             <img src={image} alt='sliderImage' width='100%'></img>
         </div>
 
