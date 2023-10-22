@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 
-const images = [
-  'https://radikadilanka.com/rdfashion/static/media/product18.8cbfe59a.jpg',
-  'https://radikadilanka.com/rdfashion/static/media/product118.8609b05b.jpg'
-]
 
-export default function ProductImage() {
+export default function ProductImage({images}) {
   const [ImageSrc, SetimageSrc] = useState(images[0]);
   return (
     <div style={{ width: '100%', textAlign: 'center' }}>
