@@ -7,13 +7,15 @@ import { Box } from '@mui/material'
 
 export default function SingaleProduct() {
     return (
-        <Box sx={{ p: 1 }}>
+        <Box sx={{ p: 3 }}>
 
             <ProductImage />
-            <ProductName />
+            <Box sx={{ mt: 2 }}>
+                <ProductName />
+            </Box>
             <ProductPrice />
             <ProductSize />
-            
+
         </Box>
     )
 }

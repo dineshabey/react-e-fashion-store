@@ -13,7 +13,8 @@ export default function ProductImage() {
         style={{
           width: '100%',
           height: 'auto',
-          borderRadius: '5px'
+          borderRadius: '5px',
+          objectFit: 'contain',
         }}
         onMouseOver={() => {
           SetimageSrc(images[1])
