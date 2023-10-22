@@ -8,7 +8,7 @@ const products = [
 
 export default function ProductLists() {
     return (
-        <Grid container>
+        <Grid container spacing={1}>
             {products.map((val, key) => {
                 return <Grid key={key} item xs={3} >
                     <div style={{ backgroundColor: key % 2 === 0 ? 'orange' : 'skyblue' }}>
