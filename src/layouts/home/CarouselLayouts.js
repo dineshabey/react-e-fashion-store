@@ -1,5 +1,5 @@
 import React from 'react';
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import { CarouselProvider, Slider, Slide, } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import SliderComponents from '../../components/home/SliderComponents';
 

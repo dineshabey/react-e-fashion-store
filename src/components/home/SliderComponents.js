@@ -11,9 +11,9 @@ export default function SliderComponents({ image, isButtonVisibale }) {
                         <Button
                             style={{
                                 color: 'white',
-                                borderRadius: '20px',
+                                borderRadius: '30px',
                                 border: '1px solid white',
-                                fontSize: '30px',
+                                fontSize: '20px',
                                 padding: '5px 20px',
                             }}
                             sx={{

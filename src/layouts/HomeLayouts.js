@@ -1,7 +1,7 @@
 import React from 'react'
-import HeaderLayouts from './home/HeaderLayouts'
+import HeaderLayouts from './common/HeaderLayouts'
 import ButtonListLayouts from './home/ButtonListLayouts'
-import FotterLayouts from './home/FotterLayouts'
+import FotterLayouts from './common/FotterLayouts'
 import CarouselLayouts from './home/CarouselLayouts'
 
 export default function HomeLayouts() {
@@ -9,7 +9,7 @@ export default function HomeLayouts() {
         <div>
             <HeaderLayouts />
             <CarouselLayouts />
-            <h3>Title</h3>
+            <p>World Largest Fashion Center</p>
             <ButtonListLayouts />
             <FotterLayouts />
         </div>
