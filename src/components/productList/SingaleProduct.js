@@ -11,7 +11,7 @@ export default function SingaleProduct() {
 
             <ProductImage />
             <Box sx={{ mt: 2 }}>
-                <ProductName />
+                <ProductName name={'Product 01'} type={'Dress'}/>
             </Box>
             <ProductPrice />
             <ProductSize />
