@@ -1,5 +1,6 @@
-import { Grid, Typography } from '@mui/material'
+import { Grid } from '@mui/material'
 import React from 'react'
+import SingaleSizeBox from './productSize/SingaleSizeBox';
 
 const defaultSize = ['XS', 'S', 'M', 'L', 'XL'];
 
@@ -9,16 +10,7 @@ export default function ProductSize() {
       <Grid item xs={1}></Grid>
       {defaultSize.map((val, key) => {
         return <Grid item key={key} xs={2} >
-          <div style={{
-            border: '2px solid teal',
-            borderRadius: '7px',
-            backgroundColor: 'black',
-            color: 'white',
-          }}>
-            <Typography >
-              {val}
-            </Typography>
-          </div>
+          <SingaleSizeBox size={val} />
         </Grid>
       })}
       <Grid item xs={1}></Grid>
