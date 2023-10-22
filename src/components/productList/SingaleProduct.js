@@ -18,7 +18,7 @@ export default function SingaleProduct() {
             <Box sx={{ mt: 2 }}>
                 <ProductName name={'Product 01'} type={'Dress'} />
             </Box>
-            <ProductPrice />
+            <ProductPrice price={'LKR :5,500.00'} />
             <ProductSize />
 
         </Box>

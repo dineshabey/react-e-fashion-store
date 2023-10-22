@@ -1,11 +1,11 @@
 import { Typography } from '@mui/material'
 import React from 'react'
 
-export default function ProductPrice() {
+export default function ProductPrice({ price }) {
   return (
-    <Typography sx={{fontWeight:'bold'}}>
+    <Typography>
       <strong>
-        LKR 3,500.00
+        {price}
       </strong>
     </Typography>
   )
