@@ -13,7 +13,6 @@ const images = [
 export default function SingaleProduct() {
     return (
         <Box sx={{ p: 3 }}>
-
             <ProductImage images={images} />
             <Box sx={{ mt: 2 }}>
                 <ProductName name={'Product 01'} type={'Dress'} />
