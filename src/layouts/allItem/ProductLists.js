@@ -1,15 +1,16 @@
-import { Grid } from '@mui/material'
+import { Grid, Typography } from '@mui/material'
 import React from 'react'
 import SingaleProduct from '../../components/productList/SingaleProduct';
 
 
-export default function ProductLists({produt}) {
+export default function ProductLists({ products }) {
     return (
         <Grid container spacing={1}>
-            {produt.map((val, key) => {
+            {products.map((val, key) => {
                 return <Grid key={key} item xs={3} >
-                    <div style={{ backgroundColor: key % 2 === 0 ? 'orange' : 'skyblue' }}>
-                        <SingaleProduct />
+                    <div>
+                        <SingaleProduct name={val.productName} price={val.price} size={val.size} type={val.productType} images={[val.images]} />
+                
                     </div>
                 </Grid>
             })}

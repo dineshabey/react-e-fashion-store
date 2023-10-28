@@ -13,7 +13,7 @@ import axios from 'axios'
 export default function AllItemsLayouts() {
 
     const [loadingStatus, setLoadingStatus] = useState('notStarted');
-    const [produts, setProducts] = useState([]);
+    const [products, setProducts] = useState([]);
 
     useEffect(() => { //componets did mount
 
@@ -38,12 +38,12 @@ export default function AllItemsLayouts() {
 
                 </Grid>
                 <Grid item xs={10}>
-                    <div style={{ backgroundColor: 'teal' }}>
+                    <div>
                         {loadingStatus === 'loading' ? (
                             <Typography>Loading ...</Typography>) :
                             loadingStatus === 'completed' ? (
-                                produts.length > 0 ? (
-                                    <ProductLists produt={produts}></ProductLists>
+                                products.length > 0 ? (
+                                    <ProductLists products={products}></ProductLists>
                                 ) : (
                                     <Typography>No Products</Typography>
                                 )) :

@@ -5,20 +5,17 @@ import ProductSize from './singaleProduct/ProductSize'
 import ProductName from './singaleProduct/ProductName'
 import { Box } from '@mui/material'
 
-const images = [
-    'https://radikadilanka.com/rdfashion/static/media/product18.8cbfe59a.jpg',
-    'https://radikadilanka.com/rdfashion/static/media/product118.8609b05b.jpg'
-]
 
-export default function SingaleProduct() {
+
+export default function SingaleProduct({ name, price, size, type,images }) {
     return (
         <Box sx={{ p: 3 }}>
             <ProductImage images={images} />
             <Box sx={{ mt: 2 }}>
-                <ProductName name={'Product 01'} type={'Dress'} />
+                <ProductName name={name} type={type} />
             </Box>
-            <ProductPrice price={'LKR :5,500.00'} />
-            <ProductSize />
+            <ProductPrice price={price} />
+            <ProductSize size={size} />
 
         </Box>
     )
