@@ -2,14 +2,11 @@ import { Grid } from '@mui/material'
 import React from 'react'
 import SingaleProduct from '../../components/productList/SingaleProduct';
 
-const products = [
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-];
 
-export default function ProductLists() {
+export default function ProductLists({produt}) {
     return (
         <Grid container spacing={1}>
-            {products.map((val, key) => {
+            {produt.map((val, key) => {
                 return <Grid key={key} item xs={3} >
                     <div style={{ backgroundColor: key % 2 === 0 ? 'orange' : 'skyblue' }}>
                         <SingaleProduct />
