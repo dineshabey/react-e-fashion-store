@@ -21,6 +21,7 @@ export default function AllItemsLayouts() {
         axios.get('https://cdn.radikadilanka.com:9000/getProducts').then((response) => {
             setLoadingStatus('completed');
             console.log(response.data);
+            setProducts(response.data);
         }).catch((e) => {
             setLoadingStatus('error');
             console.log(e)
@@ -42,7 +43,9 @@ export default function AllItemsLayouts() {
                         {loadingStatus === 'loading' ? (
                             <Typography>Loading ...</Typography>) :
                             loadingStatus === 'completed' ? (
-                                <Typography>loading completed</Typography>) :
+                                produts.length > 0 ? (<ProductLists></ProductLists>) : (
+                                    <Typography>No Products</Typography>
+                                )) :
                                 loadingStatus === 'error' ? (
                                     <Typography>loading error</Typography>) :
                                     (
@@ -54,6 +57,6 @@ export default function AllItemsLayouts() {
                 </Grid>
             </Grid>
             <FotterLayouts />
-        </div>
+        </div >
     )
 }
