@@ -2,7 +2,7 @@ import { Grid } from '@mui/material'
 import React from 'react'
 import SingaleSizeBox from './productSize/SingaleSizeBox';
 
-const defaultSize = ['XS', 'S', 'M', 'L', 'XL'];
+// const defaultSize = ['XS', 'S', 'M', 'L', 'XL'];
 
 export default function ProductSize({size}) {
   return (
