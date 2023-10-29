@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import HeaderLayouts from './common/HeaderLayouts'
-import FotterLayouts from './common/FotterLayouts'
 import { Box, Grid, Typography } from '@mui/material'
 import ProductsFilters from './allItem/ProductsFilters'
 import ProductLists from './allItem/ProductLists'
 import axios from 'axios'
+import CommonWrapperLayouts from './common/CommonWrapperLayouts'
 
 
 
@@ -29,36 +28,36 @@ export default function AllItemsLayouts() {
 
     return (
         <div>
-            <HeaderLayouts />
-            <Grid container>
-                <Grid item xs={2}>
-                    <div style={{ backgroundColor: 'yellow' }}>
-                        <ProductsFilters />
-                    </div>
+            <CommonWrapperLayouts>
+                <Grid container>
+                    <Grid item xs={2}>
+                        <div style={{ backgroundColor: 'yellow' }}>
+                            <ProductsFilters />
+                        </div>
 
+                    </Grid>
+                    <Grid item xs={10}>
+                        <div>
+                            {loadingStatus === 'loading' ? (
+                                <Typography>Loading ...</Typography>) :
+                                loadingStatus === 'completed' ? (
+                                    products.length > 0 ? (
+                                        <Box sx={{ pb: 5 }}>
+                                            <ProductLists products={products}></ProductLists>
+                                        </Box>
+                                    ) : (
+                                        <Typography>No Products</Typography>
+                                    )) :
+                                    loadingStatus === 'error' ? (
+                                        <Typography>loading error</Typography>) :
+                                        (
+                                            ""
+                                        )
+                            }
+                        </div>
+                    </Grid>
                 </Grid>
-                <Grid item xs={10}>
-                    <div>
-                        {loadingStatus === 'loading' ? (
-                            <Typography>Loading ...</Typography>) :
-                            loadingStatus === 'completed' ? (
-                                products.length > 0 ? (
-                                    <Box sx={{pb:5}}>
-                                        <ProductLists products={products}></ProductLists>
-                                    </Box>
-                                ) : (
-                                    <Typography>No Products</Typography>
-                                )) :
-                                loadingStatus === 'error' ? (
-                                    <Typography>loading error</Typography>) :
-                                    (
-                                        ""
-                                    )
-                        }
-                    </div>
-                </Grid>
-            </Grid>
-            <FotterLayouts />
-        </div >
+            </CommonWrapperLayouts>
+        </div>
     )
 }

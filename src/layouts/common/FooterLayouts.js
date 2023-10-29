@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '@mui/material/Button';
 import { Box } from '@mui/material';
 
-export default function FotterLayouts() {
+export default function FooterLayouts() {
     return (
         <Box sx={{
             backgroundColor: 'teal',
