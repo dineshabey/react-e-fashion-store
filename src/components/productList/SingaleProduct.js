@@ -7,7 +7,7 @@ import { Box } from '@mui/material'
 
 
 
-export default function SingaleProduct({ name, price, size, type,images }) {
+export default function SingaleProduct({ name, price, isAvailabelSize, type,images }) {
     return (
         <Box sx={{ p: 3 }}>
             <ProductImage images={images} />
@@ -15,7 +15,7 @@ export default function SingaleProduct({ name, price, size, type,images }) {
                 <ProductName name={name} type={type} />
             </Box>
             <ProductPrice price={price} />
-            <ProductSize size={size} />
+            <ProductSize isAvailabelSize={isAvailabelSize} />
 
         </Box>
     )

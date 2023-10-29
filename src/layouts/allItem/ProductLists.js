@@ -9,10 +9,11 @@ export default function ProductLists({ products }) {
             {products.map((val, key) => {
                 return <Grid key={key} item xs={3} >
                     <div>
-                        <SingaleProduct name={val.productName} price={val.price} size={val.size} type={val.productType} images={[val.images]} />
+                        <SingaleProduct name={val.productName} price={val.price} isAvailabelSize={val.size} type={val.productType} images={[val.images]} />
                 
                     </div>
                 </Grid>
+        
             })}
         </Grid>
     )
