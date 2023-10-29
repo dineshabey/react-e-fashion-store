@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import HeaderLayouts from './common/HeaderLayouts'
 import FotterLayouts from './common/FotterLayouts'
-import { Grid, Typography } from '@mui/material'
+import { Box, Grid, Typography } from '@mui/material'
 import ProductsFilters from './allItem/ProductsFilters'
 import ProductLists from './allItem/ProductLists'
 import axios from 'axios'
@@ -43,7 +43,9 @@ export default function AllItemsLayouts() {
                             <Typography>Loading ...</Typography>) :
                             loadingStatus === 'completed' ? (
                                 products.length > 0 ? (
-                                    <ProductLists products={products}></ProductLists>
+                                    <Box sx={{pb:5}}>
+                                        <ProductLists products={products}></ProductLists>
+                                    </Box>
                                 ) : (
                                     <Typography>No Products</Typography>
                                 )) :

@@ -7,9 +7,15 @@ import { Box } from '@mui/material'
 
 
 
-export default function SingaleProduct({ name, price, isAvailabelSize, type,images }) {
+export default function SingaleProduct({ name, price, isAvailabelSize, type, images }) {
     return (
-        <Box sx={{ p: 3 }}>
+        <Box sx={{
+            p: 3,
+            '&:hover': {
+                cursor: 'pointer',
+            }
+        }}
+        >
             <ProductImage images={images} />
             <Box sx={{ mt: 2 }}>
                 <ProductName name={name} type={type} />
