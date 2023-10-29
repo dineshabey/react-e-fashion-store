@@ -6,7 +6,7 @@ export default function CommonWrapperLayouts({ children }) {
     return (
         <div>
             <HeaderLayouts />
-            <div style={{}}>
+            <div style={{padding:'0 8%'}}>
                 {children}
             </div>
             <FooterLayouts />
