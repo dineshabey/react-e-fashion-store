@@ -1,16 +1,16 @@
-import { Grid } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import React from 'react';
 import RatingComponets from './RatingComponets';
 import StockStatusChip from './StockStatusChip';
 import PriceComponets from '../../components/productDetails/PriceComponets';
-import ProductName from '../../components/productDetails/ProductName';
+import ProductNameDetails from '../../components/productDetails/ProductNameDetails';
 
 export default function ProductDetailsSections() {
   return (
     <Grid container justifyContent={'flex-start'}>
       <Grid container justifyContent={'space-between'}>
         <Grid item>
-          <ProductName name={'Product 01'}/>
+          <ProductNameDetails name={'Product 01'}/>
         </Grid>
         <Grid item>
           <StockStatusChip />
@@ -22,9 +22,9 @@ export default function ProductDetailsSections() {
       <Grid item xs={12}>
         LKR 4500.00
         <PriceComponets value={4500} />
-        <p>
+        <Typography>
           This is the sample product description.
-        </p>
+        </Typography>
         <p>STYLE SIZE</p>
         <hr />
         <p>Qty selector and price display</p>

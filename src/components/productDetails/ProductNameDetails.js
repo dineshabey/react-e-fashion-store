@@ -1,7 +1,7 @@
 import { Typography } from '@mui/material'
 import React from 'react'
 
-export default function ProductName({ name }) {
+export default function ProductNameDetails({ name }) {
     return (
         <Typography
             sx={{

@@ -6,7 +6,12 @@ import ProductDetailsSections from '../layouts/productsDetails/ProductDetailsSec
 export default function ProductDetailsLayouts() {
     return (
         <CommonWrapperLayouts>
-            <Box sx={{textAlign:'left'}}>
+            <Box sx={{textAlign:'left',
+             border:'3px solid teal', 
+             borderRadius:'10px',
+             marginTop :'40px',
+             padding:'10px'
+             }}>
                 <Grid container justifyContent={'flex-start'}>
                     <Grid item xs={5}>
                         <ImageSlider />
