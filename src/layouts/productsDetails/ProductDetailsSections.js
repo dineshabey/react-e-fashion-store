@@ -4,13 +4,14 @@ import RatingComponets from './RatingComponets';
 import StockStatusChip from './StockStatusChip';
 import PriceComponets from '../../components/productDetails/PriceComponets';
 import ProductNameDetails from '../../components/productDetails/ProductNameDetails';
+import QtyAndPriceSections from './productDetailsSections/QtyAndPriceSections';
 
 export default function ProductDetailsSections() {
   return (
     <Grid container justifyContent={'flex-start'}>
       <Grid container justifyContent={'space-between'}>
         <Grid item>
-          <ProductNameDetails name={'Product 01'}/>
+          <ProductNameDetails name={'Product 01'} />
         </Grid>
         <Grid item>
           <StockStatusChip />
@@ -27,7 +28,9 @@ export default function ProductDetailsSections() {
         </Typography>
         <p>STYLE SIZE</p>
         <hr />
-        <p>Qty selector and price display</p>
+        <Typography>
+          <QtyAndPriceSections />
+        </Typography>
         <p>Add to card Button</p>
         <hr />
         <p>Note: Product colour may slightly vary due to photographic lighting sources or your monitor settings.</p>
