@@ -1,6 +1,6 @@
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -9,16 +9,14 @@ export default function ImageSlider() {
   return (
     <Swiper
       modules={[Pagination]}
-      pagination={{ clickable: true }}
       spaceBetween={50}
       slidesPerView={3}
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
+      pagination={{ clickable: true }}
     >
       <SwiperSlide>Slide 1</SwiperSlide>
       <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
 
     </Swiper>
   )
