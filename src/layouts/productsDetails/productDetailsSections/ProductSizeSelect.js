@@ -4,6 +4,7 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
+import SizeBox from './SizeBox';
 
 export default function ProductSizeSelect({ sizes }) {
   return (
@@ -16,7 +17,7 @@ export default function ProductSizeSelect({ sizes }) {
       >
         {sizes.map((val, key) => {
           return (
-            <FormControlLabel value={val} key={key} control={<Radio />} label={val} />
+            <FormControlLabel value={val} key={key} control={<Radio />} label={<SizeBox size={val}/>} />
           );
         })}
 
