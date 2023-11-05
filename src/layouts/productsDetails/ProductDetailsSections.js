@@ -5,6 +5,7 @@ import StockStatusChip from './StockStatusChip';
 import PriceComponets from '../../components/productDetails/PriceComponets';
 import ProductNameDetails from '../../components/productDetails/ProductNameDetails';
 import QtyAndPriceSections from './productDetailsSections/QtyAndPriceSections';
+import ProductSizeSelect from './productDetailsSections/ProductSizeSelect';
 
 export default function ProductDetailsSections({
   productName,
@@ -30,7 +31,9 @@ export default function ProductDetailsSections({
         <Typography>
           This is the sample product description.
         </Typography>
-        <p>STYLE SIZE</p>
+        <Typography>
+          <ProductSizeSelect sizes={size}/>
+        </Typography>
         <hr />
         <Typography>
           <QtyAndPriceSections price={price} />
