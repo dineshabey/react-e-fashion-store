@@ -16,7 +16,7 @@ export default function ProductDetailsSections({
     <Grid container justifyContent={'flex-start'}>
       <Grid container justifyContent={'space-between'}>
         <Grid item>
-          <ProductNameDetails name={'Product 01'} />
+          <ProductNameDetails name={`${productName} ${productType}`} />
         </Grid>
         <Grid item>
           <StockStatusChip />
@@ -26,15 +26,14 @@ export default function ProductDetailsSections({
         <RatingComponets />
       </Grid>
       <Grid item xs={12}>
-        LKR 4500.00
-        <PriceComponets value={4500} />
+        <PriceComponets value={price} />
         <Typography>
           This is the sample product description.
         </Typography>
         <p>STYLE SIZE</p>
         <hr />
         <Typography>
-          <QtyAndPriceSections />
+          <QtyAndPriceSections price={price} />
         </Typography>
         <p>Add to card Button</p>
         <hr />

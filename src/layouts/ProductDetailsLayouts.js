@@ -13,7 +13,7 @@ export default function ProductDetailsLayouts() {
         ],
         productName: "product 01",
         productType: 'Dress',
-        price: '7700.00',
+        price: '7200.00',
         size: ['xs', 's'],
     };
 

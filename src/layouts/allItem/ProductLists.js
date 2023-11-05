@@ -2,7 +2,6 @@ import { Grid } from '@mui/material'
 import React from 'react'
 import SingaleProduct from '../../components/productList/SingaleProduct';
 
-isAvailabelSizeisAvailabelSizeisAvailabelSize
 export default function ProductLists({ products }) {
     return (
         <Grid container spacing={1} >
