@@ -2,7 +2,7 @@ import { Grid } from '@mui/material'
 import React from 'react'
 import SingaleProduct from '../../components/productList/SingaleProduct';
 
-
+isAvailabelSizeisAvailabelSizeisAvailabelSize
 export default function ProductLists({ products }) {
     return (
         <Grid container spacing={1} >
@@ -10,7 +10,12 @@ export default function ProductLists({ products }) {
                 return <Grid key={key} item xs={3}
                 >
                     <div>
-                        <SingaleProduct name={val.productName} price={val.price} isAvailabelSize={val.size} type={val.productType} images={[val.images]} />
+                        <SingaleProduct
+                            name={val.productName}
+                            price={val.price}
+                            isAvailabelSize={val.size}
+                            type={val.productType}
+                            images={[val.images]} />
 
                     </div>
                 </Grid>

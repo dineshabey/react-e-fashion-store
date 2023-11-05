@@ -6,7 +6,12 @@ import PriceComponets from '../../components/productDetails/PriceComponets';
 import ProductNameDetails from '../../components/productDetails/ProductNameDetails';
 import QtyAndPriceSections from './productDetailsSections/QtyAndPriceSections';
 
-export default function ProductDetailsSections() {
+export default function ProductDetailsSections({
+  productName,
+  productType,
+  price,
+  size
+}) {
   return (
     <Grid container justifyContent={'flex-start'}>
       <Grid container justifyContent={'space-between'}>

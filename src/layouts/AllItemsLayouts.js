@@ -7,8 +7,6 @@ import CommonWrapperLayouts from './common/CommonWrapperLayouts'
 
 
 
-
-
 export default function AllItemsLayouts() {
 
     const [loadingStatus, setLoadingStatus] = useState('notStarted');
