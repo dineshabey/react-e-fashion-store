@@ -6,7 +6,7 @@ import CommonWrapperLayouts from '../common/CommonWrapperLayouts'
 export default function HomeLayouts() {
     return (
         <div>
-            <CommonWrapperLayouts>
+            <CommonWrapperLayouts isFromHome>
                 <CarouselLayouts />
                 <p>World Largest Fashion Center</p>
                 <ButtonListLayouts />

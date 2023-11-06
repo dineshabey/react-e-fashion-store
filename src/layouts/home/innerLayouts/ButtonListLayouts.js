@@ -103,6 +103,7 @@ export default function ButtonListLayouts() {
             minWidth: 300,
             width: '100%',
             justifyContent: 'center',
+            // paddingBottom:'20px',
 
         }}>
             {images.map((image) => (
