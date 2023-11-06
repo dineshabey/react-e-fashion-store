@@ -6,6 +6,7 @@ import PriceComponets from '../../components/productDetails/PriceComponets';
 import ProductNameDetails from '../../components/productDetails/ProductNameDetails';
 import QtyAndPriceSections from './productDetailsSections/QtyAndPriceSections';
 import ProductSizeSelect from './productDetailsSections/ProductSizeSelect';
+import AddToCartButtonSections from './productDetailsSections/AddToCartButtonSections';
 
 export default function ProductDetailsSections({
   productName,
@@ -31,14 +32,18 @@ export default function ProductDetailsSections({
         <Typography>
           This is the sample product description.
         </Typography>
-        <Typography>
-          <ProductSizeSelect sizes={size}/>
+        <Typography xs={12} sx={{ pt: 2 }}>
+          <ProductSizeSelect sizes={size} />
         </Typography>
         <hr />
         <Typography>
           <QtyAndPriceSections price={price} />
         </Typography>
-        <p>Add to card Button</p>
+        <Grid justifyContent={'flex-end'}>
+          <Grid item style={{}}>
+            <AddToCartButtonSections />
+          </Grid>
+        </Grid>
         <hr />
         <p>Note: Product colour may slightly vary due to photographic lighting sources or your monitor settings.</p>
       </Grid>
