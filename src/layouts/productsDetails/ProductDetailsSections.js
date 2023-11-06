@@ -40,7 +40,7 @@ export default function ProductDetailsSections({
           <QtyAndPriceSections price={price} />
         </Typography>
         <Grid justifyContent={'flex-end'}>
-          <Grid item style={{}}>
+          <Grid item style={{aling:'right'}}>
             <AddToCartButtonSections />
           </Grid>
         </Grid>
