@@ -15,6 +15,8 @@ export default function ProductDetailsLayouts() {
         productType: 'Dress',
         price: '7200.00',
         size: ['xs', 's'],
+        availableQty:100,
+        description: "Crafted from high-quality, silky-smooth fabric that drapes beautifully, this frock offers supreme comfort and a touch of opulence. You'll be the epitome of grace and elegance with every step you take.",
     };
 
     return (
@@ -37,6 +39,8 @@ export default function ProductDetailsLayouts() {
                             productType={productData.productType}
                             price={productData.price}
                             size={productData.size}
+                            productDescription={productData.description}
+                            availableQty={productData.availableQty}
                         />
                     </Grid>
 

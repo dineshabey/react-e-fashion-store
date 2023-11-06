@@ -12,7 +12,9 @@ export default function ProductDetailsSections({
   productName,
   productType,
   price,
-  size
+  size,
+  productDescription,
+  availableQty
 }) {
   return (
     <Grid container justifyContent={'flex-start'}>
@@ -21,7 +23,7 @@ export default function ProductDetailsSections({
           <ProductNameDetails name={`${productName} ${productType}`} />
         </Grid>
         <Grid item>
-          <StockStatusChip />
+          <StockStatusChip qty={availableQty} />
         </Grid>
       </Grid>
       <Grid item xs={12}>
@@ -30,7 +32,7 @@ export default function ProductDetailsSections({
       <Grid item xs={12}>
         <PriceComponets value={price} />
         <Typography>
-          This is the sample product description.
+          {productDescription}
         </Typography>
         <Typography xs={12} sx={{ pt: 2 }}>
           <ProductSizeSelect sizes={size} />
@@ -40,7 +42,7 @@ export default function ProductDetailsSections({
           <QtyAndPriceSections price={price} />
         </Typography>
         <Grid justifyContent={'flex-end'}>
-          <Grid item style={{aling:'right'}}>
+          <Grid item style={{ aling: 'right' }}>
             <AddToCartButtonSections />
           </Grid>
         </Grid>

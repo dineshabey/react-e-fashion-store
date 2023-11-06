@@ -1,6 +1,4 @@
 import React from 'react';
-import { Box } from '@mui/material';
-import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import { ShoppingCart as CartIcon } from '@mui/icons-material';
 import SnakeBarMassage from '../../../components/common/SnakeBarMassage';

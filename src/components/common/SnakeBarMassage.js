@@ -5,9 +5,9 @@ import { SnackbarProvider, useSnackbar } from 'notistack';
 function MyApp({message}) {
     const { enqueueSnackbar } = useSnackbar();
 
-    const handleClick = () => {
-        enqueueSnackbar('I love snacks.');
-    };
+    // const handleClick = () => {
+    //     enqueueSnackbar('I love snacks.');
+    // };
 
     const handleClickVariant = (variant) => () => {
         // variant could be success, error, warning, info, or default
@@ -16,8 +16,8 @@ function MyApp({message}) {
 
     return (
         <React.Fragment>
-            {/* <Button onClick={handleClickVariant('success')}>Show success snackbar</Button>
-            <Button onClick={handleClickVariant('warning')}>Show success snackbar</Button> */}
+            {/* {/* <Button onClick={handleClickVariant('success')}>Show success snackbar</Button> */}
+            <Button onClick={handleClickVariant('success')}>Show success snackbar</Button> 
         </React.Fragment>
     );
 }
@@ -28,4 +28,4 @@ export default function SnakeBarMassage({message}) {
             <MyApp message={message}/>
         </SnackbarProvider>
     );
-}
+} 
