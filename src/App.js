@@ -1,13 +1,15 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ProductDetailsLayouts from './layouts/ProductDetailsLayouts';
+// import HomeLayuouts from './layouts/home/HomeLayouts';
+// import AllItemsLayouts from './layouts/allItem/AllItemsLayouts';
+import ProductDetailsLayouts from './layouts/productsDetails/ProductDetailsLayouts';
 
 function App() {
   return (
     <div className='App'>
-      {/* <HomeLayouts /> */}
-      {/* <AllItemsLayouts /> */}
-      <ProductDetailsLayouts />
+      {/* <HomeLayuouts/> */}
+      {/* <AllItemsLayouts/> */}
+      <ProductDetailsLayouts/>
     </div>
   );
 }

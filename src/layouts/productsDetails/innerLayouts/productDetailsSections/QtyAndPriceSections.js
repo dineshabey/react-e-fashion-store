@@ -1,7 +1,7 @@
 import { Grid, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import QtySelectSection from './qtyAndPriceSection/QtySelectSection'
-import formatNumberWithCommas from '../../../util/functions';
+import formatNumberWithCommas from '../../../../util/functions';
 
 export default function QtyAndPriceSections({ price }) {
   const [qty, setQty] = useState(1);

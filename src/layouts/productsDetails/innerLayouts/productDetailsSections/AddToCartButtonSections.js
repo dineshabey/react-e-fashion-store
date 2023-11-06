@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 import { ShoppingCart as CartIcon } from '@mui/icons-material';
-import SnakeBarMassage from '../../../components/common/SnakeBarMassage';
+import SnakeBarMassage from '../../../../components/common/SnakeBarMassage';
 
 export default function AddToCartButtonSections() {
     return (
@@ -24,6 +24,7 @@ export default function AddToCartButtonSections() {
             </Button>
 
             <SnakeBarMassage message={'Product added !'}/>
+            
         </div>
 
 

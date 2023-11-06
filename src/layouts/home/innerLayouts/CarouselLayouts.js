@@ -1,16 +1,14 @@
 import React from 'react';
 import { CarouselProvider, Slider, Slide, } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
-import SliderComponents from '../../components/home/SliderComponents';
+import SliderComponents from '../../../components/home/SliderComponents';
 
 export default function CarouselLayouts() {
     const imageList = [
-        'https://radikadilanka.com/rdfashion/static/media/Yellow%20and%20White%20Fashion%20Facebook%20Cover2.7d37715a.jpg',
-        'https://radikadilanka.com/rdfashion/static/media/Yellow%20and%20White%20Fashion%20Facebook%20Cover.1e91a4ae.jpg',
-        'https://radikadilanka.com/rdfashion/static/media/Yellow_and_White_Fashion_Facebook_Cover3.3d57c154.jpg',
-        'https://radikadilanka.com/rdfashion/static/media/carasoule5.81c46b93.jpg',
-        'https://radikadilanka.com/rdfashion/static/media/carasoule6.f497aa12.jpg',
-        'https://radikadilanka.com/rdfashion/static/media/carasoule7.4adf9f2b.jpg',
+        'https://media.istockphoto.com/id/1272950747/photo/elegant-suit-with-make-up-hair-arranged-in-a-ponytail-seated-in-profile-looking-at-camera.jpg?s=1024x1024&w=is&k=20&c=fcDVs06bGTiTUbxTkuCvsmCRJobuaVVswiAYIj3xwTg=',
+        'https://media.istockphoto.com/id/1038396094/photo/young-beautiful-hispanic-woman-at-home.jpg?s=1024x1024&w=is&k=20&c=qTatlgZLJwav7Agb7ETQhIp6OmzIe_AudmBHZmOhjoc=',
+        'https://media.istockphoto.com/id/932153474/photo/studio-portrait-of-brunette-girl-in-white-blouse-on-white-background.jpg?s=1024x1024&w=is&k=20&c=vzH8kUHc20ojbMjSuFcAZEVNezjO3aLi9Bopgkh6vc4=',
+
     ]
 
     return (

@@ -2,9 +2,10 @@ import { Grid, Typography } from '@mui/material';
 import React from 'react';
 import RatingComponets from './RatingComponets';
 import StockStatusChip from './StockStatusChip';
-import PriceComponets from '../../components/productDetails/PriceComponets';
-import ProductNameDetails from '../../components/productDetails/ProductNameDetails';
+import PriceComponets from '../../../components/productDetails/PriceComponets';
+import ProductNameDetails from '../../../components/productDetails/ProductNameDetails';
 import QtyAndPriceSections from './productDetailsSections/QtyAndPriceSections';
+// import QtyAndPriceSections from './innerLayouts/';
 import ProductSizeSelect from './productDetailsSections/ProductSizeSelect';
 import AddToCartButtonSections from './productDetailsSections/AddToCartButtonSections';
 

@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material'
 import React from 'react'
-import SingaleProduct from '../../components/productList/SingaleProduct';
+import SingaleProduct from '../../../components/productList/SingaleProduct';
 
 export default function ProductLists({ products }) {
     return (
@@ -14,7 +14,8 @@ export default function ProductLists({ products }) {
                             price={val.price}
                             isAvailabelSize={val.size}
                             type={val.productType}
-                            images={[val.images]} />
+                            images={[val.images]} 
+                            />
 
                     </div>
                 </Grid>

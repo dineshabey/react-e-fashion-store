@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { Box, Grid, Typography } from '@mui/material'
-import ProductsFilters from './allItem/ProductsFilters'
-import ProductLists from './allItem/ProductLists'
 import axios from 'axios'
-import CommonWrapperLayouts from './common/CommonWrapperLayouts'
+import ProductsFilters from './innerLayouts/ProductsFilters'
+import ProductLists from './innerLayouts/ProductLists'
+import CommonWrapperLayouts from '../common/CommonWrapperLayouts'
 
 
 
@@ -42,6 +42,7 @@ export default function AllItemsLayouts() {
                                     products.length > 0 ? (
                                         <Box sx={{ pb: 5 }}>
                                             <ProductLists products={products}></ProductLists>
+
                                         </Box>
                                     ) : (
                                         <Typography>No Products</Typography>

@@ -1,8 +1,9 @@
 import React from 'react'
-import CommonWrapperLayouts from './common/CommonWrapperLayouts'
+import CommonWrapperLayouts from '../common/CommonWrapperLayouts'
 import { Box, Grid } from '@mui/material'
-import ImageSlider from '../components/productDetails/ImageSlider'
-import ProductDetailsSections from '../layouts/productsDetails/ProductDetailsSections';
+import ImageSlider from '../../components/productDetails/ImageSlider'
+// import ProductDetailsSections from './innerLayouts/ProductDetailsSections';
+import ProductDetailsSections from './innerLayouts/ProductDetailsSections';
 
 
 export default function ProductDetailsLayouts() {
@@ -15,7 +16,7 @@ export default function ProductDetailsLayouts() {
         productType: 'Dress',
         price: '7200.00',
         size: ['xs', 's'],
-        availableQty:100,
+        availableQty: 100,
         description: "Crafted from high-quality, silky-smooth fabric that drapes beautifully, this frock offers supreme comfort and a touch of opulence. You'll be the epitome of grace and elegance with every step you take.",
     };
 

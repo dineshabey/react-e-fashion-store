@@ -8,22 +8,22 @@ const imageWidth = '20%';
 
 const images = [
     {
-        url: 'https://radikadilanka.com/rdfashion/static/media/all.71109807.jpg',
+        url: 'https://cdn.radikadilanka.com/radikadilanka.com.assets/fashionImages/redDoubleLayerDress/10601623694_11b5d26601_c.jpg',
         title: 'All Items',
         width: imageWidth,
     },
     {
-        url: 'https://radikadilanka.com/rdfashion/static/media/new.5e646b80.jpg',
+        url: 'https://cdn.radikadilanka.com/radikadilanka.com.assets/fashionImages/goldMiniDress/6255706577_29e1dd8095_c.jpg',
         title: 'New Items',
         width: imageWidth,
     },
     {
-        url: 'https://radikadilanka.com/rdfashion/static/media/tranding.6b7c7c16.jpg',
+        url: 'https://cdn.radikadilanka.com/radikadilanka.com.assets/fashionImages/redDoubleLayerDress/10601623694_11b5d26601_c.jpg',
         title: 'Trending Items',
         width: imageWidth,
     },
     {
-        url: 'https://radikadilanka.com/rdfashion/static/media/top_items.867cf831.jpg',
+        url: 'https://cdn.radikadilanka.com/radikadilanka.com.assets/fashionImages/goldMiniDress/6255706577_29e1dd8095_c.jpg',
         title: 'Top Items',
         width: imageWidth,
     },
@@ -111,17 +111,17 @@ export default function ButtonListLayouts() {
                     key={image.title}
                     style={{
                         width: image.width,
-                        margin:'2%',
+                        margin: '2%',
                     }}
                 >
-                    <ImageSrc style={{ backgroundImage: `url(${image.url})`,borderRadius:'20px' }}  />
-                    <ImageBackdrop className="MuiImageBackdrop-root" style={{borderRadius:'20px'}}/>
+                    <ImageSrc style={{ backgroundImage: `url(${image.url})`, borderRadius: '20px' }} />
+                    <ImageBackdrop className="MuiImageBackdrop-root" style={{ borderRadius: '20px' }} />
                     <Image>
                         <Typography
                             component="span"
                             variant="subtitle1"
                             color="inherit"
-                            style={{borderRadius:'120px'}}
+                            style={{ borderRadius: '120px' }}
                             sx={{
                                 position: 'relative',
                                 p: 4,
