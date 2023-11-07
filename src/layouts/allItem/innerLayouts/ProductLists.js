@@ -5,7 +5,8 @@ import SingaleProduct from '../../../components/productList/SingaleProduct';
 export default function ProductLists({ products }) {
     return (
         <Grid container spacing={1} >
-            {products.map((val, key) => {
+            {products
+            .map((val, key) => {
                 return <Grid key={key} item xs={3}
                 >
                     <div>
