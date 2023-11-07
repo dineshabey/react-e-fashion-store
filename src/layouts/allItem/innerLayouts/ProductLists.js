@@ -7,9 +7,7 @@ export default function ProductLists({ products }) {
         <Grid container spacing={1} >
             {products
             .map((val, key) => {
-                return <Grid key={key} item xs={3}
-                >
-                    <div>
+                return <Grid key={key} item xs={12} sm={6} md={4} lg={3}>
                         <SingaleProduct
                             name={val.productName}
                             price={val.price}
@@ -17,8 +15,6 @@ export default function ProductLists({ products }) {
                             type={val.productType}
                             images={[val.images]} 
                             />
-
-                    </div>
                 </Grid>
 
             })}
