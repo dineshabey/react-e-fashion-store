@@ -4,8 +4,8 @@ import ReactImageMagnify from 'react-image-magnify';
 export default function SingaleproductionImage({ watchImg300, watchImg1200 }) {
     return (
         <ReactImageMagnify
-            imageStyle={{ borderRadius: '10px' }}
-            enlargedImageContainerStyle={{ borderRadius: '10px' }}
+            imageStyle={{ borderRadius: '20px 0 0 20px' }}
+            enlargedImageContainerStyle={{ borderRadius: '20px 0 0 20px' }}
             enlargedImagePosition='over'
             {...{
                 smallImage: {
@@ -14,7 +14,6 @@ export default function SingaleproductionImage({ watchImg300, watchImg1200 }) {
                     src: watchImg300,
                     height: 450,
                     width: 450,
-
                 },
                 largeImage: {
                     src: watchImg1200,
