@@ -2,7 +2,7 @@ import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 export default function HeaderLayouts() {
@@ -61,14 +61,14 @@ export default function HeaderLayouts() {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             {navLinks.map((val, key) => {
-                                return <Link to={val.url} style={{ color: 'white',paddingRight:'40px',textDecoration:'none' }} key={key}>{val.title.toUpperCase()}</Link>
+                                return <NavLink to={val.url} style={{ color: 'white',paddingRight:'40px',textDecoration:'none' }} key={key}>{val.title.toUpperCase()}</NavLink>
                             })}
 
                         </Nav>
                         <Nav>
-                            <Nav.Link eventKey={2} href="/cart" style={{ color: 'white' }}>
+                            <NavLink eventKey={2} to={'/cart'} style={{ color: 'white' }}>
                                 CART
-                            </Nav.Link>
+                            </NavLink>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
