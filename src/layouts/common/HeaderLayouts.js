@@ -10,34 +10,34 @@ export default function HeaderLayouts() {
     const navLinks = [
         {
             title: 'All Items',
-            url:'/all'
+            url: '/all'
         },
         {
             title: 'Dressess',
-            url:'/dress'
+            url: '/dress'
 
         },
         {
             title: 'Seasonal',
-            url:'/seasonal'
+            url: '/seasonal'
 
         },
         {
             title: 'Denims',
-            url:'/senims'
+            url: '/senims'
 
         },
         {
             title: 'Tshirts',
-            url:'/tshirts'
+            url: '/tshirts'
 
         },
         {
             title: 'Tops',
-            url:'/tops'
+            url: '/tops'
 
         },
-       
+
     ]
 
     return (
@@ -47,7 +47,7 @@ export default function HeaderLayouts() {
                 variant='black'
             >
                 <Container>
-                    <Link to="/" style={{ color: "yellow", fontWeight: 'bold', fontStyle: 'italic',paddingRight:'30px' }}>
+                    <Link to="/" style={{ color: "yellow", fontWeight: 'bold', fontStyle: 'italic', paddingRight: '30px' }}>
                         <img
                             alt=""
                             src="https://radikadilanka.com/rdfashion/static/media/logo2.e5c0eee2.png"
@@ -61,7 +61,20 @@ export default function HeaderLayouts() {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             {navLinks.map((val, key) => {
-                                return <NavLink to={val.url} style={{ color: 'white',paddingRight:'40px',textDecoration:'none' }} key={key}>{val.title.toUpperCase()}</NavLink>
+                                return <NavLink to={val.url}
+                                    style={{ color: 'white', paddingRight: '40px', textDecoration: 'none' }}
+                                    key={key}>
+                                    {/* {val.title.toUpperCase()} */}
+
+
+                                    {({ isActive }) => {
+                                        return (<span style={{ color: isActive ? 'red' : 'inherit' }}>
+                                            {val.title.toUpperCase()}
+                                        </span>)
+                                    }}
+
+
+                                </NavLink>
                             })}
 
                         </Nav>
