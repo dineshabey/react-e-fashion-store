@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -6,6 +6,9 @@ import { Link, NavLink } from 'react-router-dom';
 
 
 export default function HeaderLayouts() {
+
+
+    const [backgroundColor, setBackgroundColor] = useState('linear-gradient(to right, rgba(102, 126, 234, 0.5), rgba(118, 75, 162, 0.5))')
 
     const navLinks = [
         {
@@ -46,6 +49,8 @@ export default function HeaderLayouts() {
                 bg='black'
                 variant='black'
             >
+
+
                 <Container>
                     <Link to="/" style={{ color: "yellow", fontWeight: 'bold', fontStyle: 'italic', paddingRight: '30px' }}>
                         <img
@@ -57,18 +62,27 @@ export default function HeaderLayouts() {
                         />{' '}
                         e-Fashion
                     </Link>
-                    <Navbar.Toggle style={{ backgroundColor: "white" }} aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse id="responsive-navbar-nav">
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav" >
                         <Nav className="me-auto">
                             {navLinks.map((val, key) => {
                                 return <NavLink to={val.url}
-                                    style={{ color: 'white', paddingRight: '40px', textDecoration: 'none' }}
-                                    key={key}>
-                                    {/* {val.title.toUpperCase()} */}
+                                    // style={{ color: 'white', paddingRight: '40px', textDecoration: 'none' }}
 
+                                    style={({ isActive }) => {
+                                        return isActive
+                                            ? {
+                                                borderRadius: '5px', color: 'white', paddingRight: '40px', textDecoration: 'none',
+                                                background: backgroundColor,
+                                                border: '1px solid green',
 
+                                            }
+                                            : { color: 'white', textAlign: 'center', paddingRight: '40px', textDecoration: 'none' };
+                                    }}
+
+                                    key={key} >
                                     {({ isActive }) => {
-                                        return (<span style={{ color: isActive ? 'red' : 'inherit' }}>
+                                        return (<span style={{ color: isActive ? 'white' : 'inherit' }}>
                                             {val.title.toUpperCase()}
                                         </span>)
                                     }}
@@ -86,6 +100,6 @@ export default function HeaderLayouts() {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-        </div>
+        </div >
     )
 }
