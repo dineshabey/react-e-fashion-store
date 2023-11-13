@@ -7,7 +7,9 @@ export default function CommonWrapperLayouts({ children, isFromHome }) {
         <div>
             <HeaderLayouts />
             <div style={{ padding: isFromHome ? '0' : '0 8%' }}> {children} </div>
-            <FooterLayouts />
+            
+                <br/>
+            <FooterLayouts/>
         </div>
     )
 }

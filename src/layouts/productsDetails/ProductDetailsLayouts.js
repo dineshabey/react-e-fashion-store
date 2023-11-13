@@ -19,7 +19,8 @@ const productData = {
 };
 
 export default function ProductDetailsLayouts() {
-    const matches = useMediaQuery('(max-width:800px)');
+    // const matches = useMediaQuery('(max-width:800px)');
+    const matches = true;
     return (
         <CommonWrapperLayouts>
             <Box sx={{
