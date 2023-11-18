@@ -1,40 +1,36 @@
 import React from 'react'
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { Box, Grid, Typography } from '@mui/material'
 import CommonWrapperLayouts from '../common/CommonWrapperLayouts'
-import { Box, Grid } from '@mui/material'
 import ImageSlider from '../../components/productDetails/ImageSlider'
-// import ProductDetailsSections from './innerLayouts/ProductDetailsSections';
 import ProductDetailsSections from './innerLayouts/ProductDetailsSections';
 
+const productData = {
+    images: [
+        'https://cdn.radikadilanka.com/radikadilanka.com.assets/fashionImages/officeBlackJacket/alireza-esmaeeli-jnGOm2WBLJs-unsplash-min.jpg',
+        'https://cdn.radikadilanka.com/radikadilanka.com.assets/fashionImages/officeBlackJacket/alireza-esmaeeli-jnGOm2WBLJs-unsplash-min.jpg',
+    ],
+    productName: "product 01",
+    productType: 'Dress',
+    price: '7200.00',
+    size: ['xs', 's'],
+    availableQty: 100,
+    description: "Crafted from high-quality, silky-smooth fabric that drapes beautifully.",
+};
 
 export default function ProductDetailsLayouts() {
-    const productData = {
-        images: [
-            'https://cdn.radikadilanka.com/radikadilanka.com.assets/fashionImages/more_than_2/cream-pink-short-dress/32914991182_5480a1fe1b_c.jpg',
-            'https://cdn.radikadilanka.com/radikadilanka.com.assets/fashionImages/more_than_2/cream-pink-short-dress/32914991182_5480a1fe1b_c.jpg',
-        ],
-        productName: "product 01",
-        productType: 'Dress',
-        price: '7200.00',
-        size: ['xs', 's'],
-        availableQty: 100,
-        description: "Crafted from high-quality, silky-smooth fabric that drapes beautifully, this frock offers supreme comfort and a touch of opulence. You'll be the epitome of grace and elegance with every step you take.",
-    };
-
+    // const matches = useMediaQuery('(max-width:800px)');
+    const matches = true;
     return (
-
         <CommonWrapperLayouts>
             <Box sx={{
-                textAlign: 'left',
-                border: '3px solid teal',
-                borderRadius: '10px',
-                marginTop: '40px',
-                padding: '10px'
+                textAlign: 'left', border: '4px solid teal', marginTop: '40px', padding: '20px', borderRadius: '20px'
             }}>
-                <Grid container justifyContent={'flex-start'}>
-                    <Grid item xs={5}>
+                 {matches ? (  <Grid container justifyContent={'flex-start'}>
+                    <Grid item xs={12} md={6} lg={5}>
                         <ImageSlider images={productData.images} />
                     </Grid>
-                    <Grid item xs={7} pl={2}>
+                    <Grid item xs={12} md={6} lg={7} sx={{ pl: 4 }}>
                         <ProductDetailsSections
                             productName={productData.productName}
                             productType={productData.productType}
@@ -45,7 +41,17 @@ export default function ProductDetailsLayouts() {
                         />
                     </Grid>
 
-                </Grid>
+                </Grid>):(
+
+                    <Typography>Hi i'm small</Typography>
+                 )
+
+            
+            }
+
+
+
+              
             </Box>
         </CommonWrapperLayouts>
     )

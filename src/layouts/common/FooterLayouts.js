@@ -12,6 +12,8 @@ export default function FooterLayouts() {
             position:'fixed',
             width:'100%',
             bottom:'0',
+         
+            
         }}>
             <div>
                 <small>&copy; Copyright {new Date().getFullYear()}</small>

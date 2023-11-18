@@ -28,13 +28,13 @@ export default function AllItemsLayouts() {
         <div>
             <CommonWrapperLayouts>
                 <Grid container>
-                    <Grid item xs={2}>
+                    <Grid item xs={12} md={2}>
                         <div style={{ backgroundColor: 'yellow' }}>
                             <ProductsFilters />
                         </div>
 
                     </Grid>
-                    <Grid item xs={10}>
+                    <Grid item xs={12} md={10}>
                         <div>
                             {loadingStatus === 'loading' ? (
                                 <Typography>Loading ...</Typography>) :

@@ -1,8 +1,18 @@
 import React, { useState } from 'react';
 
 
-export default function ProductImage({ images }) {
-  const [imageSrc, setImageSrc] = useState(images && images.length > 0 ? images[0][0] : '');
+
+const images = [
+  'https://cdn.radikadilanka.com/radikadilanka.com.assets/fashionImages/blueDoubleLayerDress/10601626126_0a0662171b_c.jpg',
+  'https://cdn.radikadilanka.com/radikadilanka.com.assets/fashionImages/officeBlackJacket/alireza-esmaeeli-jnGOm2WBLJs-unsplash-min.jpg',
+  
+];
+
+export default function ProductImage() {
+
+  // console.log(images[0])
+  // const [imageSrc, setImageSrc] = useState(images && images.length > 0 ? images[0][0] : '');
+  const [imageSrc, setImageSrc] = useState(images && images.length > 0 ? images[0] : '');
   return (
     <div style={{ width: '100%', textAlign: 'center' }}>
       <img alt='productImage' src={imageSrc}
@@ -13,10 +23,12 @@ export default function ProductImage({ images }) {
           objectFit: 'contain',
         }}
         onMouseOver={() => {
-          setImageSrc(images && images.length > 0 ? images[0][1] : '')
+          setImageSrc(images && images.length > 0 ? images[1] : '')
+          // setImageSrc(images && images.length > 0 ? images[0][1] : '')
         }}
         onMouseOut={() => {
-          setImageSrc(images && images.length > 0 ? images[0][0] : '')
+          setImageSrc(images && images.length > 0 ? images[0] : '')
+          // setImageSrc(images && images.length > 0 ? images[0][0] : '')
 
         }}
       ></img>

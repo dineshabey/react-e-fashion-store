@@ -16,7 +16,7 @@ export default function SingaleProduct({ name, price, isAvailabelSize, type, ima
             }
         }}
         >
-            <ProductImage images={images} />
+            <ProductImage image={images} />
             <Box sx={{ mt: 2 }}>
                 <ProductName name={name} type={type} />
             </Box>
