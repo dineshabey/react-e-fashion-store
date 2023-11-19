@@ -3,8 +3,23 @@ import React, { useEffect } from 'react'
 export default function ProductsFilters({ products, setProducts }) {
 
   useEffect(() => {
+
+
   }, [products]);
 
+  const handeSizeFilter = (userSelectedSize) => {
+    const filteredProducts = [];
+    products.forEach(product => {
+      product.size.forEach(sSize => {
+        if (sSize.toLowerCase() === userSelectedSize) {
+          filteredProducts.push(product);
+        }
+
+      })
+    });
+    setProducts([...filteredProducts]);
+    console.log(products);
+  }
 
   const handleSortFilters = (filterType) => {
     switch (filterType) {
@@ -24,9 +39,17 @@ export default function ProductsFilters({ products, setProducts }) {
   }
 
   return (
-    <div>ProductsFilters
-      <button onClick={() => handleClick('asc')}>ASE</button>
-      <button onClick={() => handleClick('dsc')}>DSE</button>
+    <div>
+      ProductsFilters <br />
+      <div class='' style={{ paddingTop: '10px' }}>
+        <button onClick={() => handleClick('asc')}>ASE</button>
+      </div>
+      <div class='' style={{ paddingTop: '10px' }}>
+        <button onClick={() => handleClick('dsc')}>DSE</button>
+      </div>
+      <div class='' style={{ paddingTop: '10px' }}>
+        <button onClick={() => handeSizeFilter('s')}>small Size</button>
+      </div>
     </div>
   )
 }
