@@ -30,7 +30,7 @@ export default function AllItemsLayouts() {
                 <Grid container>
                     <Grid item xs={12} md={2}>
                         <div style={{ backgroundColor: 'yellow' }}>
-                            <ProductsFilters />
+                            <ProductsFilters products={products} setProducts={setProducts}/>
                         </div>
 
                     </Grid>
