@@ -1,5 +1,5 @@
 import React from 'react'
-import useMediaQuery from '@mui/material/useMediaQuery';
+// import useMediaQuery from '@mui/material/useMediaQuery';
 import { Box, Grid, Typography } from '@mui/material'
 import CommonWrapperLayouts from '../common/CommonWrapperLayouts'
 import ImageSlider from '../../components/productDetails/ImageSlider'
