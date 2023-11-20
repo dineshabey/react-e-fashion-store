@@ -12,21 +12,21 @@ export default function SingaleProduct({ name, price, isAvailabelSize, type, ima
     return (
         // <Link to={'/details'} style={{ textDecoration: 'none', color: 'black' }}>
 
-            <Box sx={{
-                p: 3,
-                '&:hover': {
-                    cursor: 'pointer',
-                }
-            }}
-            >
-                <ProductImage image={images} />
-                <Box sx={{ mt: 2 }}>
-                    <ProductName name={name} type={type} />
-                </Box>
-                <ProductPrice price={price} />
-                <ProductSize isAvailabelSize={isAvailabelSize} />
-
+        <Box sx={{
+            p: 3,
+            '&:hover': {
+                cursor: 'pointer',
+            }
+        }}
+        >
+            <ProductImage image={images} />
+            <Box sx={{ mt: 2 }}>
+                <ProductName name={name} type={type} />
             </Box>
+            <ProductPrice price={price} />
+            <ProductSize isAvailabelSize={isAvailabelSize} />
+
+        </Box>
         // </Link>
     )
 }
