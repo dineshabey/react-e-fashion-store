@@ -1,7 +1,6 @@
 
-// import useMediaQuery from '@mui/material/useMediaQuery';
 import React from 'react';
-import { Box, Grid, Typography } from '@mui/material'
+import { Box, Grid } from '@mui/material'
 import CommonWrapperLayouts from '../common/CommonWrapperLayouts'
 import ImageSlider from '../../components/productDetails/ImageSlider'
 import ProductDetailsSections from './innerLayouts/ProductDetailsSections';
@@ -13,22 +12,23 @@ const productData = {
         'https://cdn.radikadilanka.com/radikadilanka.com.assets/fashionImages/officeBlackJacket/alireza-esmaeeli-jnGOm2WBLJs-unsplash-min.jpg',
         'https://cdn.radikadilanka.com/radikadilanka.com.assets/fashionImages/officeBlackJacket/alireza-esmaeeli-jnGOm2WBLJs-unsplash-min.jpg',
     ],
-   
+
 };
 
 export default function ProductDetailsLayouts() {
-    // const matches = useMediaQuery('(max-width:800px)');
-    const matches = true;
-
     let { state } = useLocation();
-    console.log(state);
-    const  product  = state;
+    const product = state;
+
+    const handleAddToCard = () => {
+        console.log(product);
+    };
+
     return (
         <CommonWrapperLayouts>
             <Box sx={{
                 textAlign: 'left', border: '4px solid teal', marginTop: '40px', padding: '20px', borderRadius: '20px'
             }}>
-                {matches ? (<Grid container justifyContent={'flex-start'}>
+                {<Grid container justifyContent={'flex-start'}>
                     <Grid item xs={12} md={6} lg={5}>
                         <ImageSlider images={productData.images} />
                     </Grid>
@@ -42,18 +42,8 @@ export default function ProductDetailsLayouts() {
                             availableQty={product.availableQty}
                         />
                     </Grid>
-
-                </Grid>) : (
-
-                    <Typography>Hi i'm small</Typography>
-                )
-
-
+                </Grid>
                 }
-
-
-
-
             </Box>
         </CommonWrapperLayouts>
     )

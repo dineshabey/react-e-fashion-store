@@ -3,10 +3,11 @@ import React, { useState } from 'react'
 import QtySelectSection from './qtyAndPriceSection/QtySelectSection'
 import formatNumberWithCommas from '../../../../util/functions';
 
-export default function QtyAndPriceSections({ price }) {
+export default function QtyAndPriceSections({ handleSelectQty, price }) {
   const [qty, setQty] = useState(1);
   const handleQtyChange = (newQty) => {
     setQty(newQty);
+    handleSelectQty(newQty);
   }
 
   return (
@@ -19,7 +20,7 @@ export default function QtyAndPriceSections({ price }) {
       </Grid>
       <Grid item xs={6} sx={{ textAlign: 'end' }}>
         <Typography>
-         LKR : {formatNumberWithCommas(price * qty)}
+          LKR : {formatNumberWithCommas(price * qty)}
         </Typography>
       </Grid>
     </Grid>

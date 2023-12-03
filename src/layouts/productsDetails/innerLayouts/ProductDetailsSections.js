@@ -1,5 +1,5 @@
 import { Box, Grid, Typography } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 import RatingComponets from './RatingComponets';
 import StockStatusChip from './StockStatusChip';
 import PriceComponets from '../../../components/productDetails/PriceComponets';
@@ -14,8 +14,22 @@ export default function ProductDetailsSections({
   price,
   size,
   productDescription,
-  availableQty
+  availableQty,
 }) {
+
+  const [selectedSize, setSilectedSize] = useState();
+  const [selectedQty, setSelectedQty] = useState();
+
+  const handleSizeSelect = (size) => {
+    setSilectedSize(size);
+  };
+
+  const handleSelectQty = (qty) => {
+    console.log(qty)
+    setSelectedQty(qty);
+  };
+
+
   return (
     <Grid container justifyContent={'flex-start'}>
       <Grid xs={12} item container justifyContent={'space-between'}>
@@ -33,10 +47,10 @@ export default function ProductDetailsSections({
           {productDescription}
         </Typography>
         <Box sx={{ pt: 2 }}>
-          <ProductSizeSelect sizes={size} />
+          <ProductSizeSelect handleSizeSelect={handleSizeSelect} sizes={size} />
         </Box>
         <hr />
-        <QtyAndPriceSections price={price} />
+        <QtyAndPriceSections handleSelectQty={handleSelectQty} price={price} />
         <Grid container justifyContent={'end'} sx={{ pt: 3 }}>
           <Grid item style={{ aling: 'right' }}>
             <AddToCartButtonSections />
