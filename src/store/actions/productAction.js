@@ -1,0 +1,10 @@
+export const FETCH_PRODUCT_DATA_BEGIN = 'FETCH_PRODUCT_DATA_BEGIN';
+export const FETCH_PRODUCT_DATA_SUCCESS = 'FETCH_PRODUCT_DATA_SUCCESS';
+export const FETCH_PRODUCT_DATA_FALIURE = 'FETCH_PRODUCT_DATA_FALIURE';
+
+export const fetchProductData = () => {
+
+
+
+    
+};
