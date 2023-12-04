@@ -1,9 +1,31 @@
-const initiaState = {};
+import * as Actions from "../actions/productAction";
+
+const initiaState = {
+    productDataLoadingStatus: 'notStarted',
+    productList: [],
+};
 
 const productReducer = (state = initiaState, action) => {
     switch (action.type) {
-        case value: 'PRODUCT_REDUCER'
-            return state;
+        case Actions.FETCH_PRODUCT_DATA_BEGIN:
+            return {
+                ...state,
+                productDataLoadingStatus: 'loading',
+            };
+        case Actions.FETCH_PRODUCT_DATA_SUCCESS:
+            return {
+                ...state,
+                productDataLoadingStatus: 'completed',
+                productList: action.payload,
+            };
+
+        case Actions.FETCH_PRODUCT_DATA_FALIURE:
+            return {
+                ...state,
+                productDataLoadingStatus: 'failed',
+                productList: [],
+
+            };
 
         default:
             return state;
