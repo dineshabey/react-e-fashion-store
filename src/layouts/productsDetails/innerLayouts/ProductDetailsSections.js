@@ -9,6 +9,7 @@ import ProductSizeSelect from './productDetailsSections/ProductSizeSelect';
 import AddToCartButtonSections from './productDetailsSections/AddToCartButtonSections';
 
 export default function ProductDetailsSections({
+  handleAddToCard,
   productName,
   productType,
   price,
@@ -18,17 +19,19 @@ export default function ProductDetailsSections({
 }) {
 
   const [selectedSize, setSilectedSize] = useState();
-  const [selectedQty, setSelectedQty] = useState();
+  const [selectedQty, setSelectedQty] = useState(1);
 
   const handleSizeSelect = (size) => {
     setSilectedSize(size);
   };
 
   const handleSelectQty = (qty) => {
-    console.log(qty)
     setSelectedQty(qty);
   };
 
+  const handleClick = () => {
+    handleAddToCard(selectedSize, selectedQty);
+  }
 
   return (
     <Grid container justifyContent={'flex-start'}>
@@ -53,7 +56,7 @@ export default function ProductDetailsSections({
         <QtyAndPriceSections handleSelectQty={handleSelectQty} price={price} />
         <Grid container justifyContent={'end'} sx={{ pt: 3 }}>
           <Grid item style={{ aling: 'right' }}>
-            <AddToCartButtonSections />
+            <AddToCartButtonSections handleClick={handleClick} />
           </Grid>
         </Grid>
         <hr />

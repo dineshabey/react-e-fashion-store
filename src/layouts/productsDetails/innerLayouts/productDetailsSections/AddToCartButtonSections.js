@@ -3,11 +3,12 @@ import Button from '@mui/material/Button';
 import { ShoppingCart as CartIcon } from '@mui/icons-material';
 import SnakeBarMassage from '../../../../components/common/SnakeBarMassage';
 
-export default function AddToCartButtonSections() {
+export default function AddToCartButtonSections({ handleClick }) {
     return (
 
-        <div style={{textAlign:'right'}}>
+        <div style={{ textAlign: 'right' }}>
             <Button
+                onClick={handleClick}
                 startIcon={<CartIcon />}
                 variant='contained'
                 sx={{
@@ -23,8 +24,8 @@ export default function AddToCartButtonSections() {
                 Add To Cart
             </Button>
 
-            <SnakeBarMassage message={'Product added !'}/>
-            
+            <SnakeBarMassage message={'Product added !'} />
+
         </div>
 
 

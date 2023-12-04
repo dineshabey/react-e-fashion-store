@@ -5,6 +5,8 @@ import CommonWrapperLayouts from '../common/CommonWrapperLayouts'
 import ImageSlider from '../../components/productDetails/ImageSlider'
 import ProductDetailsSections from './innerLayouts/ProductDetailsSections';
 import { useLocation } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addProductToCart } from '../../store/actions/cartAction';
 
 
 const productData = {
@@ -18,10 +20,18 @@ const productData = {
 export default function ProductDetailsLayouts() {
     let { state } = useLocation();
     const product = state;
+    const dispatch = useDispatch();
 
-    const handleAddToCard = () => {
-        console.log(product);
+    const handleAddToCard = (qty, size) => {
+        console.log(size);
+        console.log(qty);
+        dispatch(addProductToCart({
+            product,
+            qty,
+            size
+        }))
     };
+
 
     return (
         <CommonWrapperLayouts>
@@ -34,6 +44,7 @@ export default function ProductDetailsLayouts() {
                     </Grid>
                     <Grid item xs={12} md={6} lg={7} sx={{ pl: 4 }}>
                         <ProductDetailsSections
+                            handleAddToCard={handleAddToCard}
                             productName={product.productName}
                             productType={product.productType}
                             price={product.price}
