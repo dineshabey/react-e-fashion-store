@@ -1,10 +1,8 @@
 import * as Actions from "../actions/productAction";
-
 const initiaState = {
     productDataLoadingStatus: 'notStarted',
     productList: [],
 };
-
 const productReducer = (state = initiaState, action) => {
     switch (action.type) {
         case Actions.FETCH_PRODUCT_DATA_BEGIN:
@@ -18,7 +16,6 @@ const productReducer = (state = initiaState, action) => {
                 productDataLoadingStatus: 'completed',
                 productList: action.payload,
             };
-
         case Actions.FETCH_PRODUCT_DATA_FALIURE:
             return {
                 ...state,
@@ -26,10 +23,8 @@ const productReducer = (state = initiaState, action) => {
                 productList: [],
 
             };
-
         default:
             return state;
     }
 }
-
 export default productReducer;

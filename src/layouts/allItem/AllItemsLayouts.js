@@ -4,25 +4,20 @@ import axios from 'axios'
 import ProductsFilters from './innerLayouts/ProductsFilters'
 import ProductLists from './innerLayouts/ProductLists'
 import CommonWrapperLayouts from '../common/CommonWrapperLayouts'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchProductData } from '../../store/actions/productAction'
 
 
 
 export default function AllItemsLayouts() {
 
-    const [loadingStatus, setLoadingStatus] = useState('notStarted');
-    const [products, setProducts] = useState([]);
-
+    const dispatch = useDispatch();
+    const { productDataLoadingStatus: loadingStatus, productList: products } = useSelector(store => store.productStore);
     useEffect(() => { //componets did mount
-
-        setLoadingStatus('loading');
-        axios.get('https://cdn.radikadilanka.com:9000/getProducts').then((response) => {
-            setLoadingStatus('completed');
-            setProducts(response.data);
-        }).catch((e) => {
-            setLoadingStatus('error');
-            console.log(e)
-        })
-    }, [])
+        if (loadingStatus !== 'completed') {
+            dispatch(fetchProductData());
+        }
+    }, [loadingStatus])
 
     return (
         <div>
@@ -30,7 +25,7 @@ export default function AllItemsLayouts() {
                 <Grid container>
                     <Grid item xs={12} md={2}>
                         <div style={{ backgroundColor: 'yellow' }}>
-                            <ProductsFilters products={products} setProducts={setProducts}/>
+                            <ProductsFilters products={products} setProducts={() => { }} />
                         </div>
 
                     </Grid>
