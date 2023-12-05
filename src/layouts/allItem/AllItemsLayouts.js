@@ -1,23 +1,27 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { Box, Grid, Typography } from '@mui/material'
-import axios from 'axios'
 import ProductsFilters from './innerLayouts/ProductsFilters'
 import ProductLists from './innerLayouts/ProductLists'
 import CommonWrapperLayouts from '../common/CommonWrapperLayouts'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchProductData } from '../../store/actions/productAction'
+import { fetchProductData, updateProductList } from '../../store/actions/productAction'
 
 
 
 export default function AllItemsLayouts() {
 
     const dispatch = useDispatch();
-    const { productDataLoadingStatus: loadingStatus, productList: products } = useSelector(store => store.productStore);
+    const { productDataLoadingStatus: loadingStatus,
+        productList: products } = useSelector(store => store.productStore);
     useEffect(() => { //componets did mount
         if (loadingStatus !== 'completed') {
             dispatch(fetchProductData());
         }
-    }, [loadingStatus])
+    }, [loadingStatus]);
+
+    const handleUpdateProductList = (productList) => {
+        dispatch(updateProductList(productList));
+    }
 
     return (
         <div>
@@ -25,7 +29,7 @@ export default function AllItemsLayouts() {
                 <Grid container>
                     <Grid item xs={12} md={2}>
                         <div style={{ backgroundColor: 'yellow' }}>
-                            <ProductsFilters products={products} setProducts={() => { }} />
+                            <ProductsFilters products={products} setProducts={handleUpdateProductList} />
                         </div>
 
                     </Grid>

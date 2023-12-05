@@ -23,6 +23,13 @@ const productReducer = (state = initiaState, action) => {
                 productList: [],
 
             };
+        case Actions.ASSIGN_UPDATED_PRODUCT_LIST:
+            return {
+                ...state,
+                // productDataLoadingStatus: 'failed',
+                productList: [...action.payload],
+
+            };
         default:
             return state;
     }
