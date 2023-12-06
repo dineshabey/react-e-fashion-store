@@ -3,7 +3,7 @@ import CommonWrapperLayouts from '../common/CommonWrapperLayouts'
 import { useSelector } from 'react-redux'
 import { Typography } from '@mui/material';
 
-export default function Cart() {
+export default function CartLayout() {
     const cartReducer = useSelector(store => store.cartReducer);
     const { cart } = cartReducer;
     console.log(cart);
