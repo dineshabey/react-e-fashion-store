@@ -8,9 +8,6 @@ import { Link, NavLink } from 'react-router-dom';
 
 export default function HeaderLayouts() {
 
-
-
-
     const [backgroundColor, setBackgroundColor] = useState('linear-gradient(to right, rgba(102, 126, 234, 0.5), rgba(118, 75, 162, 0.5))')
 
     const navLinks = [
@@ -50,7 +47,6 @@ export default function HeaderLayouts() {
     console.log(cartStore);
     const { cart } = cartStore;
     console.log(cart);
-
 
 
     return (

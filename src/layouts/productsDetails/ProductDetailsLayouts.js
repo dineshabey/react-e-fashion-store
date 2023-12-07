@@ -22,13 +22,14 @@ export default function ProductDetailsLayouts() {
     const product = state;
     const dispatch = useDispatch();
 
-    const handleAddToCard = (qty, size) => {
-        console.log(size);
-        console.log(qty);
+    const handleAddToCard = (size, qty) => {
+        console.log('size=', size, 'qty=', qty)
         dispatch(addProductToCart({
             product,
-            qty,
-            size
+            order: {
+                qty,
+                size,
+            }
         }))
     };
 
