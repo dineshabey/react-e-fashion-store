@@ -6,7 +6,7 @@ import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import SizeBox from './SizeBox';
 
-export default function ProductSizeSelect({ sizes }) {
+export default function ProductSizeSelect({ handleSizeSelect, sizes }) {
   return (
     <FormControl>
       <FormLabel id="demo-row-radio-buttons-group-label">Product Sizes</FormLabel>
@@ -17,7 +17,12 @@ export default function ProductSizeSelect({ sizes }) {
       >
         {sizes.map((val, key) => {
           return (
-            <FormControlLabel value={val} key={key} control={<Radio />} label={<SizeBox size={val}/>} />
+            <FormControlLabel
+              onChange={() => handleSizeSelect(val)}
+              value={val}
+              key={key}
+              control={<Radio />
+              } label={<SizeBox size={val} />} />
           );
         })}
 

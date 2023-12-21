@@ -1,5 +1,5 @@
 import { Box, Grid, Typography } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 import RatingComponets from './RatingComponets';
 import StockStatusChip from './StockStatusChip';
 import PriceComponets from '../../../components/productDetails/PriceComponets';
@@ -8,14 +8,33 @@ import QtyAndPriceSections from './productDetailsSections/QtyAndPriceSections';
 import ProductSizeSelect from './productDetailsSections/ProductSizeSelect';
 import AddToCartButtonSections from './productDetailsSections/AddToCartButtonSections';
 
+
 export default function ProductDetailsSections({
+  handleAddToCard,
   productName,
   productType,
   price,
   size,
   productDescription,
-  availableQty
+  availableQty,
 }) {
+
+  const [selectedSize, setSilectedSize] = useState();
+  const [selectedQty, setSelectedQty] = useState(1);
+
+  const handleSizeSelect = (size) => {
+    setSilectedSize(size);
+  };
+
+  const handleSelectQty = (qty) => {
+    setSelectedQty(qty);
+  };
+
+  const handleClick = () => {
+ 
+    handleAddToCard(selectedSize, selectedQty);
+  }
+
   return (
     <Grid container justifyContent={'flex-start'}>
       <Grid xs={12} item container justifyContent={'space-between'}>
@@ -33,13 +52,13 @@ export default function ProductDetailsSections({
           {productDescription}
         </Typography>
         <Box sx={{ pt: 2 }}>
-          <ProductSizeSelect sizes={size} />
+          <ProductSizeSelect handleSizeSelect={handleSizeSelect} sizes={size} />
         </Box>
         <hr />
-        <QtyAndPriceSections price={price} />
+        <QtyAndPriceSections handleSelectQty={handleSelectQty} price={price} />
         <Grid container justifyContent={'end'} sx={{ pt: 3 }}>
           <Grid item style={{ aling: 'right' }}>
-            <AddToCartButtonSections />
+            <AddToCartButtonSections handleClick={handleClick} />
           </Grid>
         </Grid>
         <hr />

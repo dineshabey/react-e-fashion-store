@@ -1,25 +1,10 @@
 import React from 'react';
-import ReactImageMagnify from 'react-image-magnify';
+import 'react-inner-image-zoom/lib/InnerImageZoom/styles.min.css';
+import InnerImageZoom from 'react-inner-image-zoom';
 
 export default function SingaleproductionImage({ watchImg300, watchImg1200 }) {
     return (
-        <ReactImageMagnify
-            imageStyle={{ borderRadius: '20px 0 0 20px' }}
-            enlargedImageContainerStyle={{ borderRadius: '20px 0 0 20px' }}
-            enlargedImagePosition='over'
-            {...{
-                smallImage: {
-                    alt: 'Wristwatch by Ted Baker London',
-                    // isFluidWidth: true,
-                    src: watchImg300,
-                    height: 450,
-                    width: 450,
-                },
-                largeImage: {
-                    src: watchImg1200,
-                    width: 700,
-                    height: 1600
-                },
-            }} />
+        <InnerImageZoom src={watchImg300} zoomSrc={watchImg1200} />
+
     )
 }

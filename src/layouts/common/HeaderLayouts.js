@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { useSelector } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
 
 
 export default function HeaderLayouts() {
-
 
     const [backgroundColor, setBackgroundColor] = useState('linear-gradient(to right, rgba(102, 126, 234, 0.5), rgba(118, 75, 162, 0.5))')
 
@@ -42,6 +42,12 @@ export default function HeaderLayouts() {
         },
 
     ]
+
+    const cartStore = useSelector(store => store.cartReducer);
+    console.log(cartStore);
+    const { cart } = cartStore;
+    console.log(cart);
+
 
     return (
         <div>
@@ -93,8 +99,9 @@ export default function HeaderLayouts() {
 
                         </Nav>
                         <Nav>
-                            <NavLink eventKey={2} to={'/cart'} style={{ color: 'white' }}>
-                                CART
+                            <NavLink eventKey={2} to={'/cart'} style={{ color: 'white', textDecoration:'none'}}>
+                                CART {cart.length > 0 && `(${cart.length})`}
+
                             </NavLink>
                         </Nav>
                     </Navbar.Collapse>

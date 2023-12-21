@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 
 
 const images = [
   'https://cdn.radikadilanka.com/radikadilanka.com.assets/fashionImages/blueDoubleLayerDress/10601626126_0a0662171b_c.jpg',
   'https://cdn.radikadilanka.com/radikadilanka.com.assets/fashionImages/officeBlackJacket/alireza-esmaeeli-jnGOm2WBLJs-unsplash-min.jpg',
-  
+
 ];
 
 export default function ProductImage() {
@@ -13,6 +13,11 @@ export default function ProductImage() {
   // console.log(images[0])
   // const [imageSrc, setImageSrc] = useState(images && images.length > 0 ? images[0][0] : '');
   const [imageSrc, setImageSrc] = useState(images && images.length > 0 ? images[0] : '');
+
+  useEffect(() => {
+    setImageSrc(images[0]);
+  }, [images[0]]);
+
   return (
     <div style={{ width: '100%', textAlign: 'center' }}>
       <img alt='productImage' src={imageSrc}
