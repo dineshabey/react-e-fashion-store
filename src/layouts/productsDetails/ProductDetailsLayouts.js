@@ -17,13 +17,19 @@ const productData = {
 
 };
 
+
+
+
 export default function ProductDetailsLayouts() {
     let { state } = useLocation();
     const product = state;
     const dispatch = useDispatch();
 
     const handleAddToCard = (size, qty) => {
-        console.log('size=', size, 'qty=', qty)
+        if (size === undefined) {
+            alert('Please select size !');
+            return;
+        }
         dispatch(addProductToCart({
             product,
             order: {
@@ -54,6 +60,9 @@ export default function ProductDetailsLayouts() {
                             availableQty={product.availableQty}
                         />
                     </Grid>
+
+
+
                 </Grid>
                 }
             </Box>

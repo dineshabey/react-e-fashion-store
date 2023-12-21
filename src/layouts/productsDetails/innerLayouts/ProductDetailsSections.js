@@ -8,6 +8,7 @@ import QtyAndPriceSections from './productDetailsSections/QtyAndPriceSections';
 import ProductSizeSelect from './productDetailsSections/ProductSizeSelect';
 import AddToCartButtonSections from './productDetailsSections/AddToCartButtonSections';
 
+
 export default function ProductDetailsSections({
   handleAddToCard,
   productName,
@@ -30,6 +31,7 @@ export default function ProductDetailsSections({
   };
 
   const handleClick = () => {
+ 
     handleAddToCard(selectedSize, selectedQty);
   }
 
