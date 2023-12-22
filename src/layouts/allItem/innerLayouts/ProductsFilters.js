@@ -48,7 +48,10 @@ export default function ProductsFilters({ products, setProducts }) {
         <button onClick={() => handleClick('dsc')}>DSE</button>
       </div>
       <div class='' style={{ paddingTop: '10px' }}>
-        <button onClick={() => handeSizeFilter('s')}>small Size</button>
+        <button onClick={() => handeSizeFilter('s')}>Small </button>
+      </div>
+      <div class='' style={{ paddingTop: '10px' }}>
+        <button onClick={() => handeSizeFilter('xs')}>XS </button>
       </div>
     </div>
   )

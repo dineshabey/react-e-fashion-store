@@ -33,6 +33,7 @@ export default function ProductDetailsSections({
   const handleClick = () => {
  
     handleAddToCard(selectedSize, selectedQty);
+    
   }
 
   return (
