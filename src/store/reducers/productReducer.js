@@ -1,7 +1,8 @@
 import * as Actions from "../actions/productAction";
 const initiaState = {
     productDataLoadingStatus: 'notStarted',
-    productList: [],
+    productList: [], // Original data set 
+    displayProductList: [],
 };
 const productReducer = (state = initiaState, action) => {
     switch (action.type) {
@@ -15,6 +16,7 @@ const productReducer = (state = initiaState, action) => {
                 ...state,
                 productDataLoadingStatus: 'completed',
                 productList: action.payload,
+                displayProductList: action.payload,
             };
         case Actions.FETCH_PRODUCT_DATA_FALIURE:
             return {
@@ -27,7 +29,7 @@ const productReducer = (state = initiaState, action) => {
             return {
                 ...state,
                 // productDataLoadingStatus: 'failed',
-                productList: [...action.payload],
+                displayProductList: [...action.payload],
 
             };
         default:
