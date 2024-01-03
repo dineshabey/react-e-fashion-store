@@ -3,7 +3,10 @@ import React from 'react'
 import SingaleProduct from '../../../components/productList/SingaleProduct';
 import { Link } from 'react-router-dom';
 
-export default function ProductLists({ products }) {
+export default function 
+
+
+ProductLists({ products }) {
 
     return (
         <Grid container spacing={1} >

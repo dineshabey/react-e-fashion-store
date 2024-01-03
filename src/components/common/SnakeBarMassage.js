@@ -5,18 +5,19 @@ import { SnackbarProvider, useSnackbar } from 'notistack';
 function MyApp({ message }) {
     const { enqueueSnackbar } = useSnackbar();
 
-    // const handleClick = () => {
-    //     enqueueSnackbar('I love snacks.');
-    // };
+    React.useEffect(() => {
+        handleClickVariant('success')();
+    }, [message])
 
     const handleClickVariant = (variant) => () => {
         // variant could be success, error, warning, info, or default
         enqueueSnackbar(message, { variant });
     };
 
+
     return (
         <React.Fragment>
-            {/* {/* <Button onClick={handleClickVariant('success')}>Show success snackbar</Button> */}
+            {<Button onClick={handleClickVariant('success')}>Show success snackbar</Button>}
             <Button onClick={handleClickVariant('success')}>Show success snackbar</Button>
         </React.Fragment>
     );

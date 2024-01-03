@@ -12,7 +12,7 @@ export default function AllItemsLayouts() {
 
     const dispatch = useDispatch();
     const { productDataLoadingStatus: loadingStatus,
-        productList: products } = useSelector(store => store.productStore);
+        displayProductList: products } = useSelector(store => store.productStore);
     useEffect(() => { //componets did mount
         if (loadingStatus !== 'completed') {
             dispatch(fetchProductData());
